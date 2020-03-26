@@ -1,0 +1,100 @@
+.footerContainer{
+    justify-content: center;
+    color: white;
+    background-color: black;
+    opacity: 0.75;
+    /* position: absolute; */
+    padding: 30px;
+    bottom: 0px;
+    width:100%;
+}
+
+.FooterTxt{
+font-size: 14px;
+}
+
+#contact{
+    width: 30px;
+    opacity: 0.2;
+}
+
+#contact:hover{
+    opacity: 1;
+}
+
+.Logo{
+    opacity: 0.8;
+    width: 160px;
+    height:80px;
+    border-radius: 100px;
+}
+.Logo:hover{
+    opacity: 1;
+    width: 160px;
+    height:80px;
+    border-radius: 100px;
+}
+
+.nav-link{
+    direction: rtl;
+    color: white;
+    opacity: 0.6;
+    text-decoration: none;
+}
+.nav-link:hover{
+    color: white;
+    opacity: 1;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 800px){
+    #contact{
+        width: 20px;
+        opacity: 0.2;
+    }
+    #contact:hover{
+        opacity: 1;
+    }
+
+    .Logo{
+        opacity: 0.8;
+        width: 120px;
+        height:70px;
+        border-radius: 100px;
+    }
+    .Logo:hover{
+        opacity: 1;
+        width: 120px;
+        height:70px;
+        border-radius: 100px;
+    }
+
+    .FooterTxt{
+        font-size: 13px;
+        }
+}
+
+@media screen and (max-width: 450px){
+    .details{
+        display: none;
+    }
+    #Footer-nav{
+        font-size:11px;
+    }
+    #contact{
+        width: 20px;
+        opacity: 0.2;
+    }
+    .Logo{
+        opacity: 0.8;
+        width: 120px;
+        height:70px;
+        border-radius: 100px;
+    }
+    .Logo:hover{
+        opacity: 1;
+        width: 120px;
+        height:70px;
+        border-radius: 100px;
+    }
+}

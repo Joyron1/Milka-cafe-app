@@ -1,0 +1,48 @@
+.Main{
+    text-align: center;
+    direction: rtl;
+}
+
+.Image{
+    width: 100%;
+}
+
+#TextArea{
+    justify-content: center;
+    display: flex;
+}
+
+#phone-body{
+    display: none;
+}
+
+#Menu{
+    width: 70%;
+}
+.MenuNav .nav a{
+    width: 180px;
+    color: black;
+    opacity: 0.4;
+    text-decoration: none;
+}
+.MenuNav .nav a:hover{
+    color: black;
+    opacity: 1;
+    text-decoration: none;
+}
+
+/* Mobile css */
+@media screen and (max-width: 450px){
+    #main-body{
+        display: none;
+    }
+    #phone-body{
+        display: block;
+    }
+    .MenuNav .nav a{
+        display: none;
+    }
+    .Image{
+        height: 260px;
+    }
+}
