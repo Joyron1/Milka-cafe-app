@@ -1,12 +1,12 @@
 import React from 'react';
 
-import Page1 from '../Bar/barImages/food1.jpg';
-import Page2 from '../Bar/barImages/food2.jpg';
-import Page3 from '../Bar/barImages/desserts.jpg';
-import Page4 from '../Bar/barImages/drink1.jpg';
-import Page5 from '../Bar/barImages/drink2.jpg';
-import Page6 from '../Bar/barImages/drink3.jpg';
-import Page7 from '../Bar/barImages/drink4.jpg';
+import Page1 from '../../Images/food1.jpg';
+import Page2 from '../../Images/food2.jpg';
+import Page3 from '../../Images/desserts.jpg';
+import Page4 from '../../Images/drink1.jpg';
+import Page5 from '../../Images/drink2.jpg';
+import Page6 from '../../Images/drink3.jpg';
+import Page7 from '../../Images/drink4.jpg';
 
 
 const menuAcordion = () => {
@@ -25,7 +25,7 @@ const menuAcordion = () => {
                         </h2>
                     </div>
                     <div id="collapseOne" class="collapse mt-2" aria-labelledby="headingOne" data-parent="#accordionExample">
-                        <div className="MenuNav row d-flex justify-content-center">
+                        <div className="barMenuNav row d-flex justify-content-center">
                             <nav class="nav">
                                 <a class="nav-link" href="#page1">ראשונות זורמות</a>
                                 <a class="nav-link" href="#page2">לטורפים בלבד</a>
@@ -35,25 +35,25 @@ const menuAcordion = () => {
                         </div>
                         <div className="row mt-3">
                             <div className="col-12" id="page1">
-                                <img id="Menu" src={Page1} />
+                                <img id="barMenu" src={Page1} />
                             </div>
                             <div className="col-12" id="page2">
-                                <img id="Menu" src={Page2} />
+                                <img id="barMenu" src={Page2} />
                             </div>
                             <div className="col-12" id="page3">
-                                <img id="Menu" src={Page3} />
+                                <img id="barMenu" src={Page3} />
                             </div>
                             <div className="col-12" id="page4">
-                                <img id="Menu" src={Page4} />
+                                <img id="barMenu" src={Page4} />
                             </div>
                             <div className="col-12">
-                                <img id="Menu" src={Page5} />
+                                <img id="barMenu" src={Page5} />
                             </div>
                             <div className="col-12">
-                                <img id="Menu" src={Page6} />
+                                <img id="barMenu" src={Page6} />
                             </div>
                             <div className="col-12">
-                                <img id="Menu" src={Page7} />
+                                <img id="barMenu" src={Page7} />
                             </div>
                         </div>
                     </div>

@@ -1,68 +1,193 @@
 import React, { Component } from 'react';
-import { Route, Link, BrowserRouter } from 'react-router-dom';
-import { Col, Row } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import { EmailShareButton, EmailIcon, FacebookShareButton, FacebookIcon, WhatsappIcon, WhatsappShareButton } from "react-share";
+
+import CallIcon from '@material-ui/icons/Call';
+import DirectionsIcon from '@material-ui/icons/Directions';
+import CafeLogo from '../../Images/cafeLogo.jpg';
+import OpenHoursModal from './linksModals/openHours/openHours';
+import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 
 import './footer.css';
 
-import FooterNav from '../Footer/FooterNav';
-
-
-import Logo from '../Header/cafe-logo.jpg';
-
 class Footer extends Component {
 
-    goToWhatsapp = () => {
-        window.location.href = "https://bit.ly/30N80Jy";
+    state = {
+        shareUrl: "http://jdevelopments.co.il/milka"
     }
-
-    goToInstagram = () => {
-        window.location.href = "https://www.instagram.com/milka.cafe/";
-    }
-
-    goToFacebook = () => {
-        window.location.href = "https://www.facebook.com/milkacaffe/";
-    }
-
     render() {
 
-        let FooterNavBar = <FooterNav goToFacebook={() => this.goToFacebook()} goToWhatsapp={() => this.goToWhatsapp()} goToInstagram={() => this.goToInstagram()}> </FooterNav>;
-
         return (
-            <div className="footerContainer">
-                {/* {FooterNavBar} */}
-                <div className="row justify-content-center my-5">
+            <div className="footerContainer row no-gutters">
 
-                    <Col xs={0} xl={3}>
-                        {/* SPACE */}
-                    </Col>
-
-                    <Col xs={12} xl={6}>
-                        <div className="row d-flex justify-content-center" >
-                            <Link to="/milka"> <img className="Logo" src={Logo} /> </Link>
+                {/* <div className="contact col-12 p-5 text-light" >
+                    <h1> דברו איתנו</h1>
+                    <div className="row mt-4">
+                        <div className="col-xl-4 col-md-4 col-sm-12">
+                            <div className="form-group">
+                                <input type="email" className="form-control" id="exampleFormControlInput1" placeholder="הכנס שם מלא" style={{ textAlign: "center" }} />
+                            </div>
                         </div>
-                        <div className="row mt-2 FooterTxt" style={{ justifyContent: "center" }}>
-                            <p >All content belongs to Milka-Cafe-Bar 2020 © </p>
+                        <div className="col-xl-4 col-md-4 col-sm-12">
+                            <div className="form-group">
+                                <input type="phone" className="form-control" id="exampleFormControlInput1" placeholder="הכנס מספר נייד" style={{ textAlign: "center" }} />
+                            </div>
                         </div>
-                    </Col>
+                        <div className="col-xl-4 col-md-4 col-sm-12">
+                            <div className="form-group">
+                                <input type="text" className="form-control" id="exampleFormControlInput1" placeholder="הכנס הודעה" rows="2" style={{ textAlign: "center" }} />
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-12 mt-2">
+                        <button type="submit" className="btn btn-primary">שלח הודעה</button>
+                    </div>
+                </div> */}
 
-                    <Col xs={0} xl={3} className="details pr-5" style={{ direction: "rtl", fontSize: "13px" }}>
-                        <Row >
-                            <p> מילקה קפה</p>
-                        </Row>
-                        <Row>
-                            <p> עופר הקריון, דרך עכו 192, קרית ביאליק</p>
-                        </Row>
-                        <Row>
-                            <p> 04-877-4343</p>
-                        </Row>
-                    </Col>
+
+                {/* ///////////////// PC CSS //////////////// */}
+                <div id="main-footer" className="col-12 mt-5">
+                    <div className="row no-gutters">
+                        <div className="col-xl-8 col-md-6 col-sm-12 text-light">
+                            <div style={{ maxWidth: "100%" }}>
+                                <div className="row no-gutters">
+                                    <div className="location col-xl-6 col-md-12 " style={{ textAlign: "center" }}>
+                                        <div className="card-body">
+                                            <h4 className="card-title">מילקה קריון</h4>
+                                            <p className="card-text"><DirectionsIcon /> עפר הקריון, דרך עכו 192 </p>
+                                            <p className="card-text"> <CallIcon /> <a href="tel:048774343" style={{ color: "white" }}> 04-877-4343</a> </p>
+                                            {/* <div class="dropdown">
+                                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    Share
+                                                    </button>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                    <FacebookShareButton className="px-2" url={this.state.shareUrl}>
+                                                        <FacebookIcon size={30} round />
+                                                    </FacebookShareButton>
+                                                    <WhatsappShareButton className="px-2" url={this.state.shareUrl} title="מנות חדשות מחכות לכם בתפריט שלנו">
+                                                        <WhatsappIcon size={30} round />
+                                                    </WhatsappShareButton>
+
+                                                    <EmailShareButton className="px-2" url={this.state.shareUrl}>
+                                                        <EmailIcon size={30} round />
+                                                    </EmailShareButton>
+                                                </div>
+                                            </div> */}
+                                            {/* <h5> שתפו את המילקה ברשתות החברתיות</h5>
+                                            <div className="container">
+                                                <FacebookShareButton className="px-2" url={this.state.shareUrl}>
+                                                    <FacebookIcon size={30} round />
+                                                </FacebookShareButton>
+
+                                                <WhatsappShareButton className="px-2" url={this.state.shareUrl} title="מנות חדשות מחכות לכם בתפריט שלנו">
+                                                    <WhatsappIcon size={30} round />
+                                                </WhatsappShareButton>
+
+                                                <EmailShareButton className="px-2" url={this.state.shareUrl}>
+                                                    <EmailIcon size={30} round />
+                                                </EmailShareButton>
+                                            </div> */}
+                                        </div>
+                                    </div>
+                                    <div className="footerLogo col-xl-6 col-md-12" style={{ textAlign: "center", borderLeft: "1px solid white" }}>
+                                        <img src={CafeLogo} className="card-img" alt="footer logo" style={{ height: "200px", width: "auto", borderRadius: "25px" }} />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* link and modals on footer */}
+                        <div className="col-xl-4 col-md-6 col-sm-12 pr-5">
+                            <div className="row no-gutters" >
+                                <OpenHoursModal />
+                                <div className="col-6 my-2">
+                                    <Link className="footerLinks" to="/milka/lookforjob" ><p>  דרושים  </p></Link>
+                                </div>
+                                <div className="col-6 my-2">
+                                    <Link className="footerLinks" to="/milka/cafemenu"> <p> תפריט בית קפה  </p></Link>
+                                </div>
+                                <div className="col-6 my-2">
+                                    <Link className="footerLinks" to="/milka/members"><p>  חברי מועדון  </p></Link>
+                                </div>
+                                <div className="col-6 my-2">
+                                    <Link className="footerLinks" to="/milka/barmenu"> <p>  תפריט בר </p> </Link>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
+
+
+
+                {/* ///////////////// MOBILE CSS //////////////// */}
+                <div id="phone-footer" className="col-12">
+                    <div className="row no-gutters">
+
+                        {/* link and modals on footer */}
+                        <div className="col-12 pr-3 pl-3" style={{ textAlign: "center" }}>
+                            <div className="row no-gutters footerLinks my-3">
+                                <OpenHoursModal />
+                                <div className=" col-6 my-2">
+                                    <Link className="footerLinks" to="/milka/lookforjob" ><p>  דרושים  </p></Link>
+                                </div>
+                                <div className="col-6 my-2">
+                                    <Link className="footerLinks" to="/milka/cafemenu"> <p> תפריט בית קפה  </p></Link>
+                                </div>
+                                <div className="col-6 my-2">
+                                    <Link className="footerLinks" to="/milka/members"><p>  חברי מועדון  </p></Link>
+                                </div>
+                                <div className="col-6 my-2">
+                                    <Link className="footerLinks" to="/milka/barmenu"> <p>  תפריט בר </p> </Link>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="col-12 text-light" style={{ textAlign: "center", borderTop: "2px dashed gray" }}>
+                            <div className="card-body mt-4">
+                                <h4 className="card-title">מילקה קריון</h4>
+                                <p className="card-text"><DirectionsIcon /> עפר הקריון, דרך עכו 192 </p>
+                                <p className="card-text"> <CallIcon /> <a href="tel:048774343" style={{ color: "white" }}> 04-877-4343</a> </p>
+
+                            </div>
+                        </div>
+                        <div className="footerLogo col-12" style={{ textAlign: "center", borderLeft: "1px solid white" }}>
+                            <img src={CafeLogo} className="card-img" alt="footer logo" style={{ height: "150px", width: "auto", borderRadius: "25px" }} />
+                        </div>
+
+                        {/* <div className="col-12 container mt-3 text-light" style={{ textAlign: "center" }}>
+                            <h6> שתפו אותנו ברשתות החברתיות</h6>
+                            <div className="mt-2">
+                                <FacebookShareButton className="px-2" url={this.state.shareUrl}>
+                                    <FacebookIcon size={30} round />
+                                </FacebookShareButton>
+
+                                <WhatsappShareButton className="px-2" url={this.state.shareUrl} seperator="seperator" title="מנות חדשות מחכות לכם בתפריט שלנו">
+                                    <WhatsappIcon size={30} round />
+                                </WhatsappShareButton>
+
+                                <EmailShareButton className="px-2" url={this.state.shareUrl}>
+                                    <EmailIcon size={30} round />
+                                </EmailShareButton>
+                            </div>
+                        </div> */}
+
+                    </div >
+                </div >
+
+
+                <div className="col-12 p-5 text-light" style={{ textAlign: "center", opacity: "0.5" }}>
+                    <p>Made with <FavoriteBorderIcon color="error" fontSize="default" /> by <a href="http://jdevelopments.co.il" style={{ color: "white" }}>jdevelopments.co.il</a>   </p>
+                </div>
+
+            </div >
         );
     }
 }
 
 export default Footer;
+
+
 
 
 

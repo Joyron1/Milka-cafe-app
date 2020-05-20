@@ -3,8 +3,8 @@ import { Route, Link, BrowserRouter } from 'react-router-dom';
 
 import MainCarousel from './MainCarousel';
 
-import Logo from '../Home/logo.jpg';
 import SecretBar from '../Home/secret_banner.jpg';
+
 
 import './home.css'
 
@@ -16,14 +16,14 @@ class Home extends Component {
         return (
             <div className="Home">
                 <div className="row no-gutters Carousel">
-                    <div className="col-sm-12 col-xl-4">
+                    <div className="col-sm-12 col-xl-4 col-md-4">
                         <Link to="/milkabar"> <img src={SecretBar} style={{ width: "100%", height: "100%", opacity: "0.9" }} /> </Link>
                     </div>
-                    <div className="col-sm-12 col-xl-8">
+                    <div className="col-sm-12 col-xl-8 col-md-8">
                         <MainCarousel></MainCarousel>
                     </div>
-
                 </div>
+
             </div>
 
 

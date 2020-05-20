@@ -1,19 +1,26 @@
 .Main{
-    /* min-height: 450px; */
-    /* max-width: 100%; */
-    /* width: 100%; */
-    overflow: hidden;
     justify-content: center;
     text-align: center;
 }
 
+#phone-body{
+    display: none;
+}
+
 
 /* Mobile css */
-@media screen and (max-width: 450px){
+@media screen and (max-width: 550px){
     .Main{
         min-height: 100%;
         /* overflow: hidden; */
         justify-content: center;
         text-align: center;
+    }
+
+    #main-body{
+        display: none;
+    }
+    #phone-body{
+        display: block;
     }
 }

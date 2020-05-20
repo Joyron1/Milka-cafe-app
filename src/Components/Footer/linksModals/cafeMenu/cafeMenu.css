@@ -1,0 +1,53 @@
+.mainCafeMenu{
+    width: 100%;
+    background: rgb(77, 77, 121);
+    font-family: 'Varela Round', sans-serif;
+    direction: rtl;
+}
+.mainCafeMenu #headerTitle{
+    font-size: 40px;
+}
+.mainCafeMenu #headerDescription{
+    font-size: 17px;
+}
+.mainCafeMenu #headerPasta{
+    font-size: 15px;
+}
+
+.mainCafeMenu .dishCard #price{
+    float: left;
+    font-size: 20px;
+}
+.mainCafeMenu .dishCard #name{
+    text-decoration-line: underline ;
+    font-size: 20px;
+}
+.mainCafeMenu .dishCard #description{
+    font-size: 14px;
+    word-spacing: 2px;
+}
+.mainCafeMenu .card-footer #name{
+    text-decoration-line: underline ;
+    font-size: 20px;
+    text-align: right;
+}
+.mainCafeMenu .card-footer #description{
+    text-align: right;
+    font-size: 12.5px;
+    word-spacing: 3px;
+    word-spacing: 4px;
+}
+#mobile_menu{
+    display: none;
+}
+
+
+@media (max-width:769px){
+    #mobile_menu{
+        display: block;
+    }
+
+    #pc_menu{
+        display: none;
+    }
+}

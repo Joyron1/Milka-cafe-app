@@ -1,4 +1,5 @@
-.Navbar {
+.App {
+  overflow-x: hidden;
   text-align: center;
   justify-content: center;
 }

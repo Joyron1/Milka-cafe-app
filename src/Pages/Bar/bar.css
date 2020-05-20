@@ -12,20 +12,19 @@
     display: flex;
 }
 
-#phone-body{
-    display: none;
-}
-
-#Menu{
+#barMenu{
+    padding-left: 50px;
+    padding-right: 50px;
     width: 70%;
 }
-.MenuNav .nav a{
+
+.barMenuNav .nav a{
     width: 180px;
     color: black;
     opacity: 0.4;
     text-decoration: none;
 }
-.MenuNav .nav a:hover{
+.barMenuNav .nav a:hover{
     color: black;
     opacity: 1;
     text-decoration: none;
@@ -33,15 +32,17 @@
 
 /* Mobile css */
 @media screen and (max-width: 450px){
-    #main-body{
+
+    .barMenuNav .nav a{
         display: none;
     }
-    #phone-body{
-        display: block;
+
+    #barMenu{
+        padding-left: 0px;
+        padding-right: 15px;
+        width: 95%;
     }
-    .MenuNav .nav a{
-        display: none;
-    }
+
     .Image{
         height: 260px;
     }
