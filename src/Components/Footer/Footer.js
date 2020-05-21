@@ -56,37 +56,6 @@ class Footer extends Component {
                                             <h4 className="card-title">מילקה קריון</h4>
                                             <p className="card-text"><DirectionsIcon /> עפר הקריון, דרך עכו 192 </p>
                                             <p className="card-text"> <CallIcon /> <a href="tel:048774343" style={{ color: "white" }}> 04-877-4343</a> </p>
-                                            {/* <div class="dropdown">
-                                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    Share
-                                                    </button>
-                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                    <FacebookShareButton className="px-2" url={this.state.shareUrl}>
-                                                        <FacebookIcon size={30} round />
-                                                    </FacebookShareButton>
-                                                    <WhatsappShareButton className="px-2" url={this.state.shareUrl} title="מנות חדשות מחכות לכם בתפריט שלנו">
-                                                        <WhatsappIcon size={30} round />
-                                                    </WhatsappShareButton>
-
-                                                    <EmailShareButton className="px-2" url={this.state.shareUrl}>
-                                                        <EmailIcon size={30} round />
-                                                    </EmailShareButton>
-                                                </div>
-                                            </div> */}
-                                            {/* <h5> שתפו את המילקה ברשתות החברתיות</h5>
-                                            <div className="container">
-                                                <FacebookShareButton className="px-2" url={this.state.shareUrl}>
-                                                    <FacebookIcon size={30} round />
-                                                </FacebookShareButton>
-
-                                                <WhatsappShareButton className="px-2" url={this.state.shareUrl} title="מנות חדשות מחכות לכם בתפריט שלנו">
-                                                    <WhatsappIcon size={30} round />
-                                                </WhatsappShareButton>
-
-                                                <EmailShareButton className="px-2" url={this.state.shareUrl}>
-                                                    <EmailIcon size={30} round />
-                                                </EmailShareButton>
-                                            </div> */}
                                         </div>
                                     </div>
                                     <div className="footerLogo col-xl-6 col-md-12" style={{ textAlign: "center", borderLeft: "1px solid white" }}>
@@ -155,22 +124,32 @@ class Footer extends Component {
                             <img src={CafeLogo} className="card-img" alt="footer logo" style={{ height: "150px", width: "auto", borderRadius: "25px" }} />
                         </div>
 
-                        {/* <div className="col-12 container mt-3 text-light" style={{ textAlign: "center" }}>
+                        <div className="col-12 container mt-3 text-light" style={{ textAlign: "center" }}>
                             <h6> שתפו אותנו ברשתות החברתיות</h6>
                             <div className="mt-2">
-                                <FacebookShareButton className="px-2" url={this.state.shareUrl}>
+                                <FacebookShareButton
+                                    className="px-2"
+                                    quote="בואו להתפנק אצלנו בתפריט משגע, מחכים לכם ♥"
+                                    url={this.state.shareUrl}>
                                     <FacebookIcon size={30} round />
                                 </FacebookShareButton>
 
-                                <WhatsappShareButton className="px-2" url={this.state.shareUrl} seperator="seperator" title="מנות חדשות מחכות לכם בתפריט שלנו">
+                                <WhatsappShareButton
+                                    className="px-2"
+                                    title="בואו להתפנק אצלנו בתפריט משגע, מחכים לכם!"
+                                    url={this.state.shareUrl}>
                                     <WhatsappIcon size={30} round />
                                 </WhatsappShareButton>
 
-                                <EmailShareButton className="px-2" url={this.state.shareUrl}>
+                                <EmailShareButton
+                                    className="px-2"
+                                    subject="בוקר- צהריים - ערב"
+                                    body="בואו להתפנק אצלנו בתפריט משגע, מחכים לכם ♥"
+                                    url={this.state.shareUrl}>
                                     <EmailIcon size={30} round />
                                 </EmailShareButton>
                             </div>
-                        </div> */}
+                        </div>
 
                     </div >
                 </div >

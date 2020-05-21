@@ -20,6 +20,7 @@ const menuAcordion = () => {
                         </h2>
                     </div>
                     <div id="collapseOne" className="collapse mt-2" aria-labelledby="headingOne" data-parent="#accordionExample">
+
                         <div className="cafeMenuNav row d-flex justify-content-center">
                             <nav class="nav">
                                 <a class="nav-link" href="#page1">ארוחות בוקר ושתייה</a>
@@ -28,6 +29,7 @@ const menuAcordion = () => {
                             </nav>
                         </div>
                         <div className="row mt-2">
+
                             <div className="col-12" id="page1">
                                 <img id="cafeMenu" src={page1} />
                             </div>

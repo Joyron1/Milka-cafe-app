@@ -1,16 +1,28 @@
 .mainCafeMenu{
     width: 100%;
-    background: rgb(77, 77, 121);
+    background: rgb(38, 38, 112);
     font-family: 'Varela Round', sans-serif;
     direction: rtl;
 }
-.mainCafeMenu #headerTitle{
+
+hr{
+    background-color: white;
+    /* opacity: 0.3; */
+}
+.dishCard hr{
+    background-color: white;
+    opacity: 0.2;
+}
+.card-header{
+    background-color: rgba(255, 255, 255, 0.082);
+}
+.card-header #headerTitle{
     font-size: 40px;
 }
-.mainCafeMenu #headerDescription{
+.card-header #headerDescription{
     font-size: 17px;
 }
-.mainCafeMenu #headerPasta{
+.card-header #headerPasta{
     font-size: 15px;
 }
 
