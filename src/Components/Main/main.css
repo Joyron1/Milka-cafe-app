@@ -1,6 +1,8 @@
+
 .Main{
     justify-content: center;
     text-align: center;
+    min-height: 100%;
 }
 
 #phone-body{

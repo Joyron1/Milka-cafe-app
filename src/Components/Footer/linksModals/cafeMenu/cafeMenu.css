@@ -1,6 +1,7 @@
 .mainCafeMenu{
     width: 100%;
-    background: rgb(38, 38, 112);
+    background: #72c4d6;
+    /* background: rgb(21, 223, 179); */
     font-family: 'Varela Round', sans-serif;
     direction: rtl;
 }
@@ -49,6 +50,7 @@ hr{
     word-spacing: 3px;
     word-spacing: 4px;
 }
+
 #mobile_menu{
     display: none;
 }
@@ -61,5 +63,17 @@ hr{
 
     #pc_menu{
         display: none;
+    }
+
+    .mainCafeMenu #navBtns{
+        justify-content: center;
+        position: -webkit-sticky;
+        position: sticky;
+        top:0px;
+    }
+
+    .DropButtons{
+        font-size: 13px;
+        margin: 0px 2px 0px 2px;
     }
 }

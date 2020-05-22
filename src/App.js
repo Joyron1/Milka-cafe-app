@@ -16,9 +16,9 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <ScrollUpButton />
-        <NavBar></NavBar>
+        {/* <NavBar></NavBar> */}
         <Main></Main>
-        <Footer></Footer>
+        {/* <Footer></Footer> */}
       </div>
     </BrowserRouter>
 

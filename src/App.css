@@ -1,7 +1,9 @@
+
 .App {
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   text-align: center;
   justify-content: center;
+  height: 100%;
 }
 
 .App-logo {

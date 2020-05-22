@@ -1,7 +1,7 @@
 import React from 'react';
 
-import page1 from '../../Images/milka_menu_0002.jpg';
-import page2 from '../../Images/milka_menu_0001.jpg';
+import page1 from '../../Images/cafeMenu_p1.jpg';
+import page2 from '../../Images/cafeMenu_p2.jpg';
 import page3 from '../../Images/menu_dess-2.jpg';
 
 const menuAcordion = () => {
